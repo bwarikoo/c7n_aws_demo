@@ -4,7 +4,5 @@ policies:
   filters:
     - type: offhour
       tag: downtime
-      default_tz: pt
-      offhour: 12
   actions:
     - stop
