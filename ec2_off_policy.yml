@@ -1,0 +1,11 @@
+policies:
+- name: offhours_policy
+  resource: ec2
+  filters:
+    - default_tz: pt
+      tag: downtime
+      onhour: 18
+      offhour: 12
+      #weekends-only: true
+  actions:
+    - stop
