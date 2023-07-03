@@ -1,5 +1,5 @@
 policies:
-  name: offhour_policy
+- name: offhour_policy
   comments: |
     stop ec2 instances having tag "downtime" as key using a recurring Lambda function.
   resource: aws.ec2
