@@ -2,8 +2,9 @@ policies:
 - name: offhours_policy
   resource: ec2
   filters:
-    - default_tz: pt
+    - type: offhour
       tag: downtime
+      default_tz: pt
       onhour: 18
       offhour: 12
   actions:
