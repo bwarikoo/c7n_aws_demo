@@ -2,6 +2,13 @@ policies:
 - name: offhours_policy
   resource: aws.ec2
   filters:
-    - "tag:Downtime": present
+    - "tag:uptime": present
   actions:
     - stop
+
+- name: onhours_policy
+  resource: aws.ec2
+  filters:
+    - "tag:Downtime": present
+  actions:
+    - start
