@@ -1,7 +1,7 @@
 policies:
 - name: offhours_policy
-  resource: ec2
+  resource: aws.ec2
   filters:
-    - tag: Downtime
+    - "tag:Downtime": present
   actions:
     - stop
