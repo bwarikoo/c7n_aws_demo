@@ -8,6 +8,5 @@ policies:
   mode:
     - type: periodic
       role: arn:aws:iam::101986080050:role/CloudCustodianRole
-      schedule: "rate(1 day)"
   actions:
     - stop
