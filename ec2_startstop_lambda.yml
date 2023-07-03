@@ -3,10 +3,10 @@ policies:
   comments: |
     stop ec2 instances having tag "downtime" as key using a recurring Lambda function.
   resource: aws.ec2
+  mode:
+    type: periodic
+    role: arn:aws:iam::101986080050:role/CloudCustodianRole
   filters:
     - "tag:downtime": present
-  mode:
-    - type: periodic
-      role: arn:aws:iam::101986080050:role/CloudCustodianRole
   actions:
     - stop
