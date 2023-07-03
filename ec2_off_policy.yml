@@ -6,6 +6,5 @@ policies:
       tag: downtime
       onhour: 18
       offhour: 12
-      #weekends-only: true
   actions:
     - stop
