@@ -1,14 +1,18 @@
 policies:
 - name: offhours_policy
+  comments: |
+    stop ec2 instances having tag "downtime" as key, value can be anything. 
   resource: aws.ec2
   filters:
-    - "tag:uptime": present
+    - "tag:downtime": present
   actions:
     - stop
 
 - name: onhours_policy
+  comments: |
+    start ec2 instances having tag "uptime" as key, value can be anything. 
   resource: aws.ec2
   filters:
-    - "tag:Downtime": present
+    - "tag:uptime": present
   actions:
     - start
