@@ -2,7 +2,6 @@ policies:
 - name: offhours_policy
   resource: ec2
   filters:
-    - type: offhour
-      "tag:downtime": present
+    - tag: Downtime
   actions:
     - stop
