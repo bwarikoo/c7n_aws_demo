@@ -8,7 +8,7 @@ policies:
     schedule: "cron(0 18 ? * MON *)"
     role: arn:aws:iam::101986080050:role/CloudCustodianRole
   filters:
-    - default_tz: pt
+    - default_tz: "pt"
       "tag:downtime": present
   actions:
     - stop
