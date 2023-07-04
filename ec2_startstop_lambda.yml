@@ -5,6 +5,7 @@ policies:
   resource: aws.ec2
   mode:
     type: periodic
+    schedule: "cron(0 18 ? * MON *)"
     role: arn:aws:iam::101986080050:role/CloudCustodianRole
   filters:
     - "tag:downtime": present
